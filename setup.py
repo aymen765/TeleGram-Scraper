@@ -32,7 +32,7 @@ def requirements():
 			""")
 	banner()
 	print(gr+'['+cy+'+'+gr+']'+cy+' it will take upto 10 min to install csv merge.')
-	input_csv = input(gr+'['+cy+'+'+gr+']'+cy+' do you want to enable csv merge (y/n): ').lower()
+	input_csv = "y" #input(gr+'['+cy+'+'+gr+']'+cy+' do you want to enable csv merge (y/n): ').lower()
 	if input_csv == "y":
 		csv_lib()
 	else:
@@ -52,11 +52,11 @@ def config_setup():
 	banner()
 	cpass = configparser.RawConfigParser()
 	cpass.add_section('cred')
-	xid = input(gr+"[+] enter api ID : "+re)
+	xid = "20030163" #input(gr+"[+] enter api ID : "+re)
 	cpass.set('cred', 'id', xid)
-	xhash = input(gr+"[+] enter hash ID : "+re)
+	xhash = "f2d2ffaadf8b8740aa28342cd36895b9" #input(gr+"[+] enter hash ID : "+re)
 	cpass.set('cred', 'hash', xhash)
-	xphone = input(gr+"[+] enter phone number : "+re)
+	xphone = "+967775502173" #input(gr+"[+] enter phone number : "+re)
 	cpass.set('cred', 'phone', xphone)
 	setup = open('config.data', 'w')
 	cpass.write(setup)

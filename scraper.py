@@ -27,7 +27,8 @@ try:
     api_id = cpass['cred']['id']
     api_hash = cpass['cred']['hash']
     phone = cpass['cred']['phone']
-    client = TelegramClient(phone, api_id, api_hash)
+    sess = "1BJWap1wBu6sAOyQZ3XN5CQ5dS61pYmBJ3DhN3y7m97hc1mTgz4Z_dTlOFT6Wh8_adLaTh0DJRd7SePpSIyNZWk9BO6IZQG329Rb8Dty_i0RqHVVGVgRlgbUhwzfr4CU1xnijjSqlA5WYiXmNNtbOfAX9MPcOMhb3b2eRa3IG-G8rRrGCngcSNRxVpbKsAO-kVxPpV0qwLZdipxmBfZacm77BrButFq3MSjzuMjP9NKXpcr9y1FFb1duJG-O2x2Uv5gAF0aBYJk2S4WLnSb5isBBHBjZFPb84hqJzRnwOWvO7zTLnNIgZtV2gDyzfKF7FsgcPrrGWvWvRzECBbbi5LDWhJ_ATrLI="
+    client = TelegramClient(sess, api_id, api_hash)
 except KeyError:
     os.system('clear')
     banner()
